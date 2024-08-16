@@ -1,6 +1,6 @@
 # USCIS Case Status: A Python Scraper
 
-Confirmed to be working as of August 15, 2024
+Confirmed to be working as of August 15, 2024.
 
 ## How to use
 ```python
