@@ -48,8 +48,7 @@ def query_uscis(receipt_number):
     # 3rd request: get case status
     headers['Authorization'] = f'{token_type} {access_token}'
     query_response = session.get(f'https://egov.uscis.gov/csol-api/case-statuses/{receipt_number}', cookies=cookies, headers=headers)
-    case = query_response.json()['CaseStatusResponse']
-    status = case['detailsEng']['actionCodeText']
+    status = query_response.json()['CaseStatusResponse']['detailsEng']['actionCodeText']
 
     session.close()
 
